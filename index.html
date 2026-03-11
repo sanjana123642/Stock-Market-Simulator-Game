@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stock Market Simulator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1> Stock Market Simulator </h1>
+<button class="resetBtn" onclick="resetGame()">Reset Simulation</button>
+<div class="wallet">
+Wallet Balance
+<h2>₹ <span id="balance">100000</span></h2>
+</div>
+<div class="volatilityToggle">
+<label>
+<input type="checkbox" id="volatilityMode">
+Advanced Volatility Mode
+</label>
+</div>
+
+</header>
+
+
+<nav>
+<ul>
+<li onclick="scrollToSection('home')">Home</li>
+<li onclick="scrollToSection('market')">Market</li>
+<li onclick="scrollToSection('portfolio')">Portfolio</li>
+<li onclick="scrollToSection('leaderboard')">Leaderboard</li>
+</ul>
+</nav>
+
+<section id="home">
+
+
+<div class="dashboard-section">
+
+    <!-- Left Side -->
+    <div class="dashboard-left">
+        <h2>Dashboard</h2>
+
+        <div class="stats">
+            <div class="card">
+                <h3>Total Profit</h3>
+                <p id="profit">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Loss</h3>
+                <p id="loss">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Portfolio Value</h3>
+                <p id="portfolio">0</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Side -->
+    
+        <div class="dashboard-right">
+    <img src="stock.jpg" alt="Stock Image">
+</div>
+    </div>
+
+</div>
+
+</section>
+<div class="analytics">
+
+<div class="card">
+<h3>Total Invested</h3>
+<p id="invested">0</p>
+</div>
+
+<div class="card">
+<h3>Total Stocks Owned</h3>
+<p id="stocksOwned">0</p>
+</div>
+
+<div class="card">
+<h3>Best Performing Stock</h3>
+<p id="bestStock">-</p>
+</div>
+
+</div>
+
+<section id="market">
+
+<h2>Market Overview</h2>
+
+<table>
+
+<thead>
+<tr>
+<th>Company</th>
+<th>Price</th>
+<th>% Change</th>
+<th>Qty</th>
+<th>Buy</th>
+</tr>
+</thead>
+
+<tbody id="marketTable"></tbody>
+
+</table>
+
+</section>
+
+
+
+<section id="portfolio">
+
+<h2>Your Portfolio</h2>
+
+<table>
+
+<thead>
+
+<tr>
+<th>Stock</th>
+<th>Shares</th>
+<th>Avg Price</th>
+<th>Current Price</th>
+<th>Total Value</th>
+<th>P/L</th>
+<th>Qty</th>
+<th>Sell</th>
+</tr>
+
+</thead>
+
+<tbody id="portfolioTable"></tbody>
+
+</table>
+
+</section>
+
+
+
+<section id="leaderboard">
+
+<h2>Leaderboard</h2>
+
+<table>
+
+<thead>
+
+<tr>
+<th>Rank</th>
+<th>Player</th>
+<th>Portfolio Value</th>
+</tr>
+
+</thead>
+
+<tbody id="leaderboardTable"></tbody>
+
+</table>
+
+</section>
+
+
+
+<section id="achievements">
+
+<h2>Achievements</h2>
+
+<div id="badgeContainer"></div>
+
+</section>
+
+
+<footer>
+
+<p>FinTech Educational Simulation Project</p>
+
+</footer>
+
+<script src="script.js"></script>
+<section id="learn">
+
+<h2>Beginner Trading Tips</h2>
+
+<div class="tips">
+
+<div class="tipCard">
+<h3> Diversify Portfolio</h3>
+<p>Invest in multiple companies instead of one stock to reduce risk.</p>
+</div>
+
+<div class="tipCard">
+<h3> Buy Low Sell High</h3>
+<p>Look for stocks whose prices dropped recently and may recover.</p>
+</div>
+
+<div class="tipCard">
+<h3> Manage Risk</h3>
+<p>Never invest all your capital in one trade.</p>
+</div>
+
+<div class="tipCard">
+<h3> Watch Volatility</h3>
+<p>High price fluctuations create both risk and opportunity.</p>
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>
